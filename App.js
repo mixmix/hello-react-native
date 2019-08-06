@@ -24,8 +24,15 @@ import {
   ReloadInstructions
 } from 'react-native/Libraries/NewAppScreen'
 
+import MagicCard from './components/magic-card'
+
 export default class HelloWorldApp extends Component {
   render () {
+    const card = {
+      name: 'Wall of Roots',
+      src: 'https://cdn.pucatrade.com/cards/crops/sm/13629.jpg'
+    }
+
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <StatusBar barStyle='dark-content' />
@@ -40,8 +47,9 @@ export default class HelloWorldApp extends Component {
               </View>
             )}
             <View style={styles.body}>
+              <MagicCard {...card} />
               <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
+                <Text style={styles.sectionTitle}>Step Uno</Text>
                 <Text style={styles.sectionDescription}>
                   Edit <Text style={styles.highlight}>App.js</Text> to change this
                   screen and then come back to see your edits.
